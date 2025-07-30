@@ -1,6 +1,6 @@
 
 # How to Setup/Install PostgreSQL Server on Azure/AWS/GCP (Ubuntu)
-
+# https://azuremarketplace.microsoft.com/en-us/marketplace/apps/cloud-infrastructure-services.postgresql-ubuntu
 This guide walks through the steps required to install and configure PostgreSQL on an Ubuntu server running in a cloud environment such as **Azure**, **AWS**, or **GCP**.
 
 ---
