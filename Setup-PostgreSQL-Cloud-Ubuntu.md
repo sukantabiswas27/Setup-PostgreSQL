@@ -61,8 +61,17 @@ Enter PostgreSQL shell:
 psql
 ```
 
----
 
+How many database users (roles) you have in PostgreSQL
+```sql
+SELECT rolname FROM pg_roles;
+```
+
+---
+Exit the PostgreSQL shell:
+```
+\q
+```
 ## 🛠 Step 4: Create Database and User Roles
 
 Create a new database and user inside the PostgreSQL shell:
