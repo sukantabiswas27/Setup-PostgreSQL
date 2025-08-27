@@ -5,17 +5,33 @@ This guide walks through the steps required to install and configure PostgreSQL 
 
 ---
 
-## 📦 Step 1: Add Postgres User to Sudo Group
-
+## 📦 Step 1: Create Postgres User and add Postgres User to Sudo Group & nstall PostgreSQL
+```bash
+sudo useradd postgres
+```
 Ensure the `postgres` user has root (sudo) access.
 
 ```bash
 sudo usermod -aG sudo postgres
 ```
-
+```bash
+sudo apt update
+sudo apt install postgresql postgresql-contrib
 ---
+```
+Confirm installation:
+After installation, you can confirm that PostgreSQL is installed by checking its version:
 
-## 🔐 Step 2: Set PostgreSQL User Password
+```bash
+psql --version
+```
+Start PostgreSQL Service
+```bash
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+```
+---
+## 🔐 Step 2: Set PostgreSQL User Password 
 
 Set a system password for the `postgres` user:
 
