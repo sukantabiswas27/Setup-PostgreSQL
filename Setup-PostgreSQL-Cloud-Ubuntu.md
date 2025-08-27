@@ -175,7 +175,24 @@ Ensure the following ports are open on your VM firewall and cloud security group
 - **443** – HTTPS (for pgAdmin)
 
 ---
+## 🔒 Step 9:Steps to Delete Unwanted Databases
+```shell
+psql -U postgres
+```
+```sql
+\l
+```
+Disconnect users from the database you want to delete: PostgreSQL won’t let you drop a database if someone is connected to it.
 
+```sql
+SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE datname = 'unwanted_db_name';
+```
+next
+``` sql
+DROP DATABASE unwanted_db_name;
+```
 ## ✅ Done!
 
 Your PostgreSQL server is now installed and configured on Ubuntu in the cloud. You can connect remotely using `psql`, pgAdmin, or application clients.
