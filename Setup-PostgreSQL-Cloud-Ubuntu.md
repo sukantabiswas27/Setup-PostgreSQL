@@ -77,9 +77,9 @@ Exit the PostgreSQL shell:
 Create a new database and user inside the PostgreSQL shell:
 
 ```sql
-CREATE DATABASE mytestdb;
-CREATE USER mytestuser WITH ENCRYPTED PASSWORD 'MyStr0ngP@SS';
-GRANT ALL PRIVILEGES ON DATABASE mytestdb TO mytestuser;
+CREATE DATABASE cargocare;
+CREATE USER cargocare WITH ENCRYPTED PASSWORD 'Newsz9]EB!6IQhjeK5:gtZX';
+GRANT ALL PRIVILEGES ON DATABASE cargocare TO cargocare;
 ```
 
 List databases:
